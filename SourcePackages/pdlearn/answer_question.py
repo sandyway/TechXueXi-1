@@ -71,7 +71,7 @@ def answer_question(quiz_type, cookies, scores, score_all, quiz_xpath, category_
         # if nohead:
         #     print("使用默认窗口大小")
         # else:
-        driver_ans.driver.maximize_window()
+        # driver_ans.driver.maximize_window()
         print('请保持窗口最大化\n'*3)
         driver_ans.get_url("https://www.xuexi.cn/notFound.html")
         driver_ans.set_cookies(cookies)
@@ -425,7 +425,7 @@ def answer_question(quiz_type, cookies, scores, score_all, quiz_xpath, category_
                 print("检测到"+quiz_zh_CN[quiz_type]+"答题分数已满,退出学 xi ")
             else:
                 print("！！！！！没拿到满分，请收集日志反馈错误题目！！！！！")
-                auto.prompt("完成后（或懒得弄）请在此按回车...")
+                # auto.prompt("完成后（或懒得弄）请在此按回车...")
                 # log_daily("！！！！！没拿到满分！！！！！")
         if driver_default == None:
             try:
