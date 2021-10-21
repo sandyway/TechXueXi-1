@@ -54,9 +54,10 @@ jobs:
         uses: docker/setup-qemu-action@v1.2.0
         with:
           # QEMU static binaries Docker image (e.g. tonistiigi/binfmt:latest)
-
+          image: tonistiigi/binfmt:latest
           # Platforms to install (e.g. arm64,riscv64,arm)
-          platforms: arm64,arm/v7,amd64
+          # platforms: arm64,arm/v7,amd64
+          platforms: all
  
       - name: Build and push Docker image
         run: |
@@ -70,6 +71,10 @@ jobs:
                       -t techxuexi/techxuexi-arm64v8:${GITHUB_REF##*/}${{ github.run_number }} \
                       --push \
                       -f ./Dockerfile_arm64v8 .
+              #docker buildx build --platform linux/arm/v7 \
+              #        -t techxuexi/techxuexi-arm32v7:${GITHUB_REF##*/}${{ github.run_number }} \
+              #        --push \
+              #        -f ./Dockerfile_arm32v7 .
 
       #- name: Sleep for 30 seconds 
       #  uses: jakejarvis/wait-action@master         
