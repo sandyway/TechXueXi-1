@@ -1,8 +1,29 @@
 {
-    "techxuexi_version": "v20211020",
+    "techxuexi_version": "v20211101",
     "techxuexi_update_log": [{
-        "version": "v20211020",
-        "info": "windows 打包。"
+        "version": "v20211101",
+        "info": "docker: 1. 部分功能采用及时回复; 2. 微信模板发送; 3. 增加微信模板配置项，增加说明文档 "
+    },{
+        "version": "v20211031",
+        "info": "docker: 1.增加微信互动功能; 2.微信token改为文件存储，方便主线程和守护线程共享; 3.修改bot消息发送，可以发送给指定用户; 4.增加文档说明; 5.增加默认配置文件的配置项; 6.微信暂时使用nohup启动，方便查阅日志，稳定后改为supervisord; 7.修复文档，get_score异常处理; 8.access_token过期后强制刷新; "
+    },{
+        "version": "v20211030",
+        "info": "优化参数配置 修复了无窗模式默认开启的问题，优化v指令"
+    },{
+        "version": "v20211029",
+        "info": "docker增加了web 推送支持。"
+    },{
+        "version": "v20211028",
+        "info": "docker增加了一个自循环方法，如果出现连接超时问题，就自己再次启动连接。"
+    },{
+        "version": "v20211027",
+        "info": "增加收集题库配置项，修复提示异常，增加全局消息"
+    },{
+        "version": "v20211025",
+        "info": "Docker enable supervisor，修改文档"
+    },{
+        "version": "v20211022",
+        "info": "fix refresh cookie error，修复q_text 使用异常，修改 mydriver.py 初始化参数，同步更新tgbot监听功能，更新上传题目地址"
     },{
         "version": "v20211018",
         "info": "增加tg代理配置项。修复SendLoginQRcode的错误提示。取消自动打包arm32v7 docker（存在问题）。修改requirements.txt"
